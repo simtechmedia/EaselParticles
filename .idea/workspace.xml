@@ -4,7 +4,10 @@
     <list default="true" id="c8da5581-76f7-4ec1-a985-57a5d0996a0e" name="Default" comment="" />
     <ignored path="EaselParticles.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1365777946482" ignored="false" />
+    <file path="/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366019176124" ignored="false" />
+    <file path="/style.css" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1365999671979" ignored="false" />
+    <file path="/style.less" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366009260026" ignored="false" />
+    <file path="/app.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366021491802" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +27,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="23" selection-start="232" selection-end="232" vertical-scroll-proportion="-8.16">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="3" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.77272725">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shape.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/easeljs/display/Shape.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="4" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elements.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/elements.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="34" selection-start="2316" selection-end="2319" vertical-scroll-proportion="-1.52">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="61" selection-start="797" selection-end="797" vertical-scroll-proportion="0.2079646">
+            <state line="29" column="0" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-18.961538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisplayObject.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/easeljs/display/DisplayObject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="598" column="7" selection-start="21520" selection-end="21520" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processing-1.4.1.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vendor/processing-1.4.1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="710" column="20" selection-start="19532" selection-end="19532" vertical-scroll-proportion="-39.24">
               <folding />
             </state>
           </provider>
@@ -43,7 +100,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
   </component>
@@ -108,11 +168,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="easeljs" />
+              <option name="myItemId" value="less" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -127,14 +183,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="easeljs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -160,6 +208,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp\www\EaselParticles\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\EaselParticles\js\vendor" />
+      <recent name="C:\wamp\www\EaselParticles\less" />
     </key>
   </component>
   <component name="RunManager">
@@ -273,9 +325,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/processing-1.4.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="710" column="20" selection-start="19532" selection-end="19532" vertical-scroll-proportion="-39.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/easeljs/display/DisplayObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="598" column="7" selection-start="21520" selection-end="21520" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/elements.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="34" selection-start="2316" selection-end="2319" vertical-scroll-proportion="-1.52">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="232" selection-end="232" vertical-scroll-proportion="-8.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="61" selection-start="797" selection-end="797" vertical-scroll-proportion="0.2079646">
+        <state line="29" column="0" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-18.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/easeljs/display/Shape.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="4" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="3" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.77272725">
           <folding />
         </state>
       </provider>
