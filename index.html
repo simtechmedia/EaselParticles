@@ -4,6 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Easel Particles</title>
     <link href="less/style.less" rel="stylesheet/less" />
+    <link rel="stylesheet" href="css/cupertino/jquery-ui-1.10.2.custom.css" />
+    <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/easeljs/utils/UID.js"></script>
     <script type="text/javascript" src="js/easeljs/geom/Matrix2D.js"></script>
     <script type="text/javascript" src="js/easeljs/events/EventDispatcher.js"></script>
@@ -11,19 +13,44 @@
     <script type="text/javascript" src="js/easeljs/display/Container.js"></script>
     <script type="text/javascript" src="js/easeljs/display/Stage.js"></script>
     <script type="text/javascript" src="js/easeljs/events/MouseEvent.js"></script>
+
     <script type="text/javascript" src="js/easeljs/display/Shape.js"></script>
     <script type="text/javascript" src="js/easeljs/display/Graphics.js"></script>
     <script type="text/javascript" src="js/easeljs/utils/Ticker.js"></script>
     <script type="text/javascript" src="js/easeljs/display/Text.js"></script>
+    <script src="js/vendor/jquery-1.9.1.js"></script>
+    <script src="js/vendor/jquery-ui-1.10.2.custom.js"></script>
     <script src="js/vendor/html5shiv.js"></script>
     <script src="js/vendor/less-1.3.3.min.js"></script>
+    <script src="js/vendor/processing-1.4.1.js"></script>
     <script src="js/app.js"></script>
 
 </head>
 <body onload="init();">
 <canvas id="mainCanvas" width="960" height="350"></canvas>
 <div id="toolbar">
-    Hello
+    <h3>Controls</h3>
+    <hr>
+    <p>
+        <label for="partAmount">Particle Amount:</label>
+        <input type="text" id="partAmount"/>
+    </p>
+    <div id="slider-amount"></div>
+
+    <hr>
+    <p>
+        <label for="partSize">Particle Size:</label>
+        <input type="text" id="partSize" />
+    </p>
+    <div id="slider-size"></div>
+
+    <hr>
+    <p>
+        <label for="partSpeed">Particle Speed:</label>
+        <input type="text" id="partSpeed" />
+    </p>
+    <div id="slider-speed"></div>
+
 </div>
 </body>
 </html>
