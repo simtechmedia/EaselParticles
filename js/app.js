@@ -19,6 +19,8 @@ var colors = ["#828b20", "#b0ac31", "#cbc53d", "#fad779", "#f9e4ad", "#faf2db", 
 
 var particleContainer ;
 
+
+
 function init() {
     if (window.top != window) {
         document.getElementById("header").style.display = "none";
@@ -53,16 +55,16 @@ function init() {
 function createParticle()
 {
     var shape = new createjs.Shape();
+    shape.velocity = new PVector(Math.random()*10-5,Math.random()*10-5);
+    shape.location = new PVector(canvas.width / 2,canvas.height / 2);
+    shape.x = shape.location.x;
+    shape.y = shape.location.y;
 
-    shape.velocity = new PVector
 
     shape.graphics.setStrokeStyle(2);
     shape.graphics.beginStroke("#000000");
     shape.graphics.beginFill("#f9a71f").drawCircle(1,1,circleRadius-2);
-    shape.x = canvas.width / 2 ;
-    shape.y = canvas.height / 2 ;
-    shape.velX = Math.random()*10-5;
-    shape.velY = Math.random()*10-5;
+
     shape.scaleX = shape.scaleY = randomFromInterval(minSize,maxSize)/20;
     shape.alpha = 1;
     shape.cache(-circleRadius, -circleRadius, circleRadius*2, circleRadius*2);              // Set Cache
@@ -86,8 +88,9 @@ function tick()
         var shape = particleContainer.getChildAt(i);
         if (typeof(shape.x) !== 'undefined')
         {
-            shape.x = (shape.x+shape.velX+w)%w;
-            shape.y = (shape.y+shape.velY+h)%h;
+            shape.location.add(shape.velocity);
+            shape.x = shape.location.x;
+            shape.y = shape.location.y;
             shape.alpha = shape.ttl / shape.totallife;
             shape.ttl--;
             if(shape.ttl < 1 ) {
