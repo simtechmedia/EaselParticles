@@ -15,11 +15,16 @@ var maxLife = 5;
 var minSize = 1;
 var maxSize = 30;
 
+var minSpeed = 1;
+var maxSpeed = 5;
+
 var colors = ["#828b20", "#b0ac31", "#cbc53d", "#fad779", "#f9e4ad", "#faf2db", "#563512", "#9b4a0b", "#d36600", "#fe8a00", "#f9a71f"];
 
 var particleContainer ;
 
+var mouse = new PVector(1,1);
 
+var topSpeed = 4;
 
 function init() {
     if (window.top != window) {
@@ -55,11 +60,13 @@ function init() {
 function createParticle()
 {
     var shape = new createjs.Shape();
-    shape.velocity = new PVector(Math.random()*10-5,Math.random()*10-5);
-    shape.location = new PVector(canvas.width / 2,canvas.height / 2);
+//    shape.velocity = new PVector(0,0);
+    shape.velocity = new PVector(randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2,randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2);
+    shape.location = new PVector( canvas.width / 2 , canvas.height / 2 );
+    shape.acceleration = new PVector(0,0);
+
     shape.x = shape.location.x;
     shape.y = shape.location.y;
-
 
     shape.graphics.setStrokeStyle(2);
     shape.graphics.beginStroke("#000000");
@@ -82,15 +89,27 @@ function tick()
     var w = canvas.width;
     var h = canvas.height;
     var l = particleContainer.getNumChildren()-1;
+
     // iterate through all the children and move them according to their velocity:
     for (var i=0; i<l-1; i++)
     {
         var shape = particleContainer.getChildAt(i);
         if (typeof(shape.x) !== 'undefined')
         {
+            // Mouse FOllow
+            var dir = new PVector(0,0).subStatic( mouse , shape.location);
+            dir.normalize(1);
+            dir.multi(0.1);
+            shape.acceleration = dir;
+            shape.velocity.add(shape.acceleration);
+            shape.velocity.limit(topSpeed);
+            // End of mouse follow
+
             shape.location.add(shape.velocity);
+
             shape.x = shape.location.x;
             shape.y = shape.location.y;
+
             shape.alpha = shape.ttl / shape.totallife;
             shape.ttl--;
             if(shape.ttl < 1 ) {
@@ -102,8 +121,7 @@ function tick()
     for ( var i = l ; i > 0 ; i--)
     {
         var shape = particleContainer.getChildAt(i);
-        if(shape.remove === true)
-        {
+        if(shape.remove === true){
             shape.uncache();
             particleContainer.removeChild(shape);
         }
@@ -150,18 +168,24 @@ function resize() {
  */
 $(function() {
 
+    // Get Mouse Location
+    $(document).mousemove(function(e){
+        mouse.x = e.pageX;
+        mouse.y = e.pageY;
+    });
+
     // Amount Slider
     $( "#slider-amount" ).slider({
-        range: true,
-        min: 0,
+        min: 1,
         max: 200,
-        values: [ 50, 100 ],
+        value: 100,
         slide: function( event, ui ) {
-            $( "#partAmount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            $( "#partAmount" ).val( ui.value );
+            numOfParticles = ui.value;
+
         }
     });
-    $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ) +
-        " -" + $( "#slider-amount" ).slider( "values", 1 ) );
+    $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ));
 
     // Size Slider
     $( "#slider-size" ).slider({
@@ -173,7 +197,6 @@ $(function() {
             $( "#partSize" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
             minSize = ui.values[ 0 ];
             maxSize = ui.values[ 1 ];
-            console.log(maxSize)
         }
     });
     $( "#partSize" ).val( $( "#slider-size" ).slider( "values", 0 ) +
@@ -182,12 +205,13 @@ $(function() {
     // Speed Slider
     $( "#slider-speed" ).slider({
         range: true,
-        min: 10,
-        max: 40,
-        values: [ 15, 20 ],
+        min: 1,
+        max: 10,
+        values: [ 1, 5 ],
         slide: function( event, ui ) {
             $( "#partSpeed" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-
+            minSpeed = ui.values[ 0 ];
+            maxSpeed = ui.values[ 1 ];
         }
     });
     $( "#partSpeed" ).val( $( "#slider-speed" ).slider( "values", 0 ) +
