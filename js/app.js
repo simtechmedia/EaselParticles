@@ -26,6 +26,8 @@ var mouse = new PVector(1,1);
 
 var topSpeed = 4;
 
+var strength = 1;
+
 function init() {
     if (window.top != window) {
         document.getElementById("header").style.display = "none";
@@ -99,13 +101,26 @@ function tick()
             // Mouse FOllow
             var dir = new PVector(0,0).subStatic( mouse , shape.location);
             dir.normalize(1);
-            dir.multi(0.1);
+            dir.multi(strength / 10 );
             shape.acceleration = dir;
             shape.velocity.add(shape.acceleration);
             shape.velocity.limit(topSpeed);
             // End of mouse follow
 
             shape.location.add(shape.velocity);
+
+            // Check Edges
+            if (shape.location.x > stage.canvas.width) {
+                shape.location.x = 0;
+            } else if ( shape.location.x < 0) {
+                shape.location.x = stage.canvas.width;
+            }
+
+            if (shape.location.y > stage.canvas.height) {
+                shape.location.y = 0;
+            }  else if ( shape.location.y < 0) {
+                shape.location.y = stage.canvas.height;
+            }
 
             shape.x = shape.location.x;
             shape.y = shape.location.y;
@@ -216,4 +231,17 @@ $(function() {
     });
     $( "#partSpeed" ).val( $( "#slider-speed" ).slider( "values", 0 ) +
         " -" + $( "#slider-speed" ).slider( "values", 1 ) );
+
+    // Speed strength
+    $( "#slider-strength" ).slider({
+        min: 1,
+        max: 10,
+        value: strength ,
+        slide: function( event, ui ) {
+            $( "#attrStrengh" ).val( ui.value );
+            strength = ui.value ;
+        }
+    })
+    $( "#attrStrengh" ).val( $( "#slider-strength" ).slider( "values", 0 ));
+
 });
