@@ -1,34 +1,31 @@
 var FPS = 60;
 
-var canvas;
-var stage;
+var canvas;                             // Canvas
+var stage;                              // Stage
+var particleContainer ;                 // Particle Container
 
+// Base Varibles
 var circleRadius=50;
-
 var numOfParticles = 300;
-
 var minLife = 2;
 var maxLife = 5;
-
 var minSize = 1;
 var maxSize = 30;
-
 var minSpeed = 1;
 var maxSpeed = 5;
-
-var colors = ["#828b20", "#b0ac31", "#cbc53d", "#fad779", "#f9e4ad", "#faf2db", "#563512", "#9b4a0b", "#d36600", "#fe8a00", "#f9a71f"];
-
-var particleContainer ;
-
-var mouse = new PVector(1,1);
-
 var topSpeed = 4;
-
 var strength = 1;
 
-var baseShape;
+var baseShape;                          // Base Shape of particles, the ones on the stage just cloen this one
+
+var w ;                                 // Current Width of Canvas
+var h ;                                 // Current Height of Canvas
+
+var emiter;                             // Main Emiter, might add more than one later
+var subtractorAr = new Array();         // Array to hold negative forces
 
 function init() {
+
     if (window.top != window) {
         document.getElementById("header").style.display = "none";
     }
@@ -40,7 +37,13 @@ function init() {
 
     // Make a Seperate Container for the particles, makes it easier to manage
     particleContainer = new createjs.Container();
-    stage.addChild(particleContainer);
+    stage.addChild(particleContainer);    
+
+    createEmiter();     // Creates Emiter
+
+    createSubtractor(650, 200);
+
+    createSubtractor(500, 400);
 
     // Create the base particle for the rest of the particles
     baseShape = new createjs.Shape();
@@ -49,7 +52,7 @@ function init() {
     baseShape.graphics.beginFill("#f9a71f").drawCircle(1,1,circleRadius-2);
     baseShape.cache(-circleRadius, -circleRadius, circleRadius*2, circleRadius*2);              // Set Cache
 
-
+    // 
     for (var i=0; i < numOfParticles; i++) {
         createParticle();
     }
@@ -65,22 +68,100 @@ function init() {
     createjs.Ticker.setFPS(FPS);
 }
 
+function createSubtractor(x, y)
+{
+    var subtractor = new createjs.Shape(); 
+    subtractor.graphics.beginFill("#000000").drawCircle(1,1,circleRadius-2);
+    subtractor.x = x ;
+    subtractor.y = y ;
+    stage.addChild(subtractor);
+    subtractorAr.push(subtractor);
+
+    (function(target) {
+        subtractor.onPress = function(evt) {
+            // bump the target in front of it's siblings:
+            stage.addChild(target);
+            var offset = {x:target.x-evt.stageX, y:target.y-evt.stageY};
+
+            // add a handler to the event object's onMouseMove callback
+            // this will be active until the user releases the mouse button:
+            evt.onMouseMove = function(ev) {
+                target.x = ev.stageX+offset.x;
+                target.y = ev.stageY+offset.y;
+                // indicate that the stage should be updated on the next tick:
+                update = true;
+            }
+        }
+        subtractor.onMouseOver = function() {
+            target.scaleX = target.scaleY = target.scale*1.2;
+            update = true;
+        }
+        subtractor.onMouseOut = function() {
+            target.scaleX = target.scaleY = target.scale;
+            update = true;
+        }
+    })(subtractor);
+}
+
+function createEmiter()
+{
+    // Create Emiter
+    emiter = new createjs.Shape();
+    emiter.graphics.setStrokeStyle(2);
+    emiter.graphics.beginStroke("#000000");
+    emiter.graphics.beginFill("#ffffff").drawCircle(1,1,circleRadius-2);
+    emiter.x = w / 2 + circleRadius /2 ;
+    emiter.y = h / 2 + circleRadius /2 ;
+    stage.addChild(emiter);
+
+    (function(target) {
+        emiter.onPress = function(evt) {
+            // bump the target in front of it's siblings:
+            stage.addChild(target);
+            var offset = {x:target.x-evt.stageX, y:target.y-evt.stageY};
+
+            // add a handler to the event object's onMouseMove callback
+            // this will be active until the user releases the mouse button:
+            evt.onMouseMove = function(ev) {
+                target.x = ev.stageX+offset.x;
+                target.y = ev.stageY+offset.y;
+                // indicate that the stage should be updated on the next tick:
+                update = true;
+            }
+        }
+        emiter.onMouseOver = function() {
+            target.scaleX = target.scaleY = target.scale*1.2;
+            update = true;
+        }
+        emiter.onMouseOut = function() {
+            target.scaleX = target.scaleY = target.scale;
+            update = true;
+        }
+    })(emiter);
+}
+
 /**
  * Creates particle using varibles defined
  */
 function createParticle()
 {
-    var particle = new createjs.Bitmap(baseShape.cacheCanvas);
-    particle.scaleX = particle.scaleY = randomFromInterval(minSize,maxSize) / 20;                   // Scale
+    var particle        = new createjs.Bitmap(baseShape.cacheCanvas);
+    particle.scaleX     = particle.scaleY   = randomFromInterval(minSize,maxSize) / 20;                   // Scale'
+    particle.regX       = particle.regY     = - particle.width ;
+
+    // Super Exensive
+    var randomFilter = new createjs.ColorFilter(randomPrecision(0,1,2),randomPrecision(0,1,2),randomPrecision(0,1,2),1);
+    particle.filters = [randomFilter];
+    particle.cache( 0 , 0, circleRadius*2, circleRadius*2);              // Set Cache
 
     // Vector Speeds
-    particle.velocity = new PVector(randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2,randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2);
-    particle.location = new PVector( canvas.width / 2 , canvas.height / 2 );
+    particle.velocity   = new PVector(randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2,randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2);
+    particle.location   = new PVector( emiter.x - circleRadius / 2  , emiter.y - circleRadius / 2 );
     particle.acceleration = new PVector(0,0);
 
     // Move According to Vector
-    particle.x = particle.location.x;
-    particle.y = particle.location.y;
+    particle.x = particle.location.x - ( circleRadius / 2 ) * particle.scaleY ;
+    particle.y = particle.location.y - ( circleRadius / 2 ) * particle.scaleY ;
 
     particle.alpha = 1;
     particle.snapToPixel = true;
@@ -95,49 +176,52 @@ function createParticle()
 function tick()
 {
     fpsLabel.text = Math.round(createjs.Ticker.getMeasuredFPS())+" fps";
-    var w = canvas.width;
-    var h = canvas.height;
+    
     var l = particleContainer.getNumChildren()-1;
 
     // iterate through all the children and move them according to their velocity:
     for (var i=0; i<l-1; i++)
     {
         var shape = particleContainer.getChildAt(i);
-        if (typeof(shape.x) !== 'undefined')
-        {
-            // Mouse FOllow
-            var dir = new PVector(0,0).subStatic( mouse , shape.location);
+
+        // Negative Forces
+        for (var j = 0; j < subtractorAr.length; j++) {
+            var element = subtractorAr[j];
+            var dir = new PVector(0,0).subStatic( new PVector( element.x , element.y ) , shape.location);
             dir.normalize(1);
             dir.multi(strength / 10 );
             shape.acceleration = dir;
             shape.velocity.add(shape.acceleration);
-            shape.velocity.limit(topSpeed);
-            // End of mouse follow
-
-            shape.location.add(shape.velocity);
-
-            // Check Edges
-            if (shape.location.x > stage.canvas.width) {
-                shape.location.x = 0;
-            } else if ( shape.location.x < 0) {
-                shape.location.x = stage.canvas.width;
-            }
-
-            if (shape.location.y > stage.canvas.height) {
-                shape.location.y = 0;
-            }  else if ( shape.location.y < 0) {
-                shape.location.y = stage.canvas.height;
-            }
-
-            shape.x = shape.location.x;
-            shape.y = shape.location.y;
-
-            shape.alpha = shape.ttl / shape.totallife;
-            shape.ttl--;
-            if(shape.ttl < 1 ) {
-                shape.remove = true;
-            }
         }
+        
+        // Adding Forces to Particle
+        shape.velocity.limit(topSpeed);
+        shape.location.add(shape.velocity);
+
+        // Check Edges
+        if (shape.location.x > stage.canvas.width) {
+            shape.location.x = 0;
+        } else if ( shape.location.x < 0) {
+            shape.location.x = stage.canvas.width;
+        }
+
+        if (shape.location.y > stage.canvas.height) {
+            shape.location.y = 0;
+        }  else if ( shape.location.y < 0) {
+            shape.location.y = stage.canvas.height;
+        }
+
+        // Showing Particle Relative the location VEctor
+        shape.x = shape.location.x;
+        shape.y = shape.location.y;
+
+        // Alpha according to it's lie span
+        shape.alpha = shape.ttl / shape.totallife;
+        shape.ttl--;
+        if(shape.ttl < 1 ) {
+            shape.remove = true;
+        }
+        
     }
     // Do the Remove Afterwards
     for ( var i = l ; i > 0 ; i--)
@@ -180,8 +264,11 @@ function resize() {
     stage.canvas.width = window.innerWidth;
     stage.canvas.height = window.innerHeight;
 
+    w = canvas.width;
+    h = canvas.height;
+
     // Content: centered
-    canvas.x = stage.canvas.width / 2;
+    //canvas.x = stage.canvas.width / 2;
     canvas.y = stage.canvas.height / 2;
 }
 

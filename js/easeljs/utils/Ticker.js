@@ -456,9 +456,7 @@ var Ticker = function() {
 	var now = window.performance && (performance.now || performance.mozNow || performance.msNow || performance.oNow || performance.webkitNow);
 	Ticker._getTime = function() {
 		return (now&&now.call(performance))||(new Date().getTime());
-	}
-	
-	
+	}	
 	Ticker.init();
 
 createjs.Ticker = Ticker;
