@@ -1,13 +1,11 @@
-
 var FPS = 60;
 
 var canvas;
 var stage;
 
-var circleRadius=30;
-var rings = 30;
+var circleRadius=50;
 
-var numOfParticles = 100;
+var numOfParticles = 300;
 
 var minLife = 2;
 var maxLife = 5;
@@ -28,6 +26,8 @@ var topSpeed = 4;
 
 var strength = 1;
 
+var baseShape;
+
 function init() {
     if (window.top != window) {
         document.getElementById("header").style.display = "none";
@@ -38,8 +38,17 @@ function init() {
     window.addEventListener('resize', resize, false);
     resize();
 
+    // Make a Seperate Container for the particles, makes it easier to manage
     particleContainer = new createjs.Container();
     stage.addChild(particleContainer);
+
+    // Create the base particle for the rest of the particles
+    baseShape = new createjs.Shape();
+    baseShape.graphics.setStrokeStyle(2);
+    baseShape.graphics.beginStroke("#000000");
+    baseShape.graphics.beginFill("#f9a71f").drawCircle(1,1,circleRadius-2);
+    baseShape.cache(-circleRadius, -circleRadius, circleRadius*2, circleRadius*2);              // Set Cache
+
 
     for (var i=0; i < numOfParticles; i++) {
         createParticle();
@@ -61,25 +70,23 @@ function init() {
  */
 function createParticle()
 {
-    var shape = new createjs.Shape();
-//    shape.velocity = new PVector(0,0);
-    shape.velocity = new PVector(randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2,randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2);
-    shape.location = new PVector( canvas.width / 2 , canvas.height / 2 );
-    shape.acceleration = new PVector(0,0);
+    var particle = new createjs.Bitmap(baseShape.cacheCanvas);
+    particle.scaleX = particle.scaleY = randomFromInterval(minSize,maxSize) / 20;                   // Scale
 
-    shape.x = shape.location.x;
-    shape.y = shape.location.y;
+    // Vector Speeds
+    particle.velocity = new PVector(randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2,randomPrecision(minSpeed,maxSpeed,2)-maxSpeed/2);
+    particle.location = new PVector( canvas.width / 2 , canvas.height / 2 );
+    particle.acceleration = new PVector(0,0);
 
-    shape.graphics.setStrokeStyle(2);
-    shape.graphics.beginStroke("#000000");
-    shape.graphics.beginFill("#f9a71f").drawCircle(1,1,circleRadius-2);
+    // Move According to Vector
+    particle.x = particle.location.x;
+    particle.y = particle.location.y;
 
-    shape.scaleX = shape.scaleY = randomFromInterval(minSize,maxSize)/20;
-    shape.alpha = 1;
-    shape.cache(-circleRadius, -circleRadius, circleRadius*2, circleRadius*2);              // Set Cache
-    shape.snapToPixel = true;
-    shape.ttl = shape.totallife = randomPrecision( minLife , maxLife , 2 ) * FPS;       //Init shape Time to live
-    particleContainer.addChild(shape);
+    particle.alpha = 1;
+    particle.snapToPixel = true;
+    particle.ttl = particle.totallife = randomPrecision( minLife , maxLife , 2 ) * FPS;           //Init shape Time to live
+    particleContainer.addChild(particle);
+
 }
 
 /**
@@ -191,9 +198,9 @@ $(function() {
 
     // Amount Slider
     $( "#slider-amount" ).slider({
-        min: 1,
-        max: 200,
-        value: 100,
+        min: 100,
+        max: 500,
+        value: numOfParticles,
         slide: function( event, ui ) {
             $( "#partAmount" ).val( ui.value );
             numOfParticles = ui.value;
@@ -212,6 +219,21 @@ $(function() {
             $( "#partSize" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
             minSize = ui.values[ 0 ];
             maxSize = ui.values[ 1 ];
+        }
+    });
+    $( "#partSize" ).val( $( "#slider-size" ).slider( "values", 0 ) +
+        " -" + $( "#slider-size" ).slider( "values", 1 ) );
+
+    // Life Slider
+    $( "#slider-life" ).slider({
+        range: true,
+        min: 1,
+        max: 15,
+        values: [ minLife, maxLife ],
+        slide: function( event, ui ) {
+            $( "#partLife" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+            minLife = ui.values[ 0 ];
+            maxLife = ui.values[ 1 ];
         }
     });
     $( "#partSize" ).val( $( "#slider-size" ).slider( "values", 0 ) +
