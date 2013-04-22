@@ -7,7 +7,7 @@
     <file path="/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366125442227" ignored="false" />
     <file path="/style.css" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1365999671979" ignored="false" />
     <file path="/style.less" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366072309055" ignored="false" />
-    <file path="/app.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366125481614" ignored="false" />
+    <file path="/app.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366604607046" ignored="false" />
     <file path="/Mover.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366110032816" ignored="false" />
     <file path="/PVector.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366119330309" ignored="false" />
     <file path="/Dummy.txt" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366117303932" ignored="false" />
@@ -33,7 +33,25 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="28" selection-start="2220" selection-end="2228" vertical-scroll-proportion="-13.803922">
+            <state line="53" column="28" selection-start="2220" selection-end="2228" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elements.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/elements.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="49" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UID.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/easeljs/utils/UID.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,21 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UID.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/easeljs/utils/UID.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="25" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.4731405">
+            <state line="191" column="0" selection-start="6834" selection-end="6834" vertical-scroll-proportion="0.24284199">
               <folding />
             </state>
           </provider>
@@ -71,7 +78,7 @@
       <file leaf-file-name="PVector.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/PVector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="-26.52">
+            <state line="39" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,17 +106,6 @@
         <entry file="file://$PROJECT_DIR$/js/easeljs/display/MovieClip.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="3" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elements.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/elements.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="49" selection-start="2882" selection-end="2882" vertical-scroll-proportion="-5.94">
               <folding />
             </state>
           </provider>
@@ -135,6 +131,7 @@
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -273,18 +270,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="options.lastSelected" value="appearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
-      <server id="e84a0217-c38d-4ae7-a8a1-66c4ff965934">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="c636b87a-fea2-46f9-aa76-d47d19182436">
+        <serverdata />
       </server>
     </servers>
   </component>
@@ -299,17 +297,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -343,26 +333,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25506938" sideWeight="0.9980373" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -391,7 +382,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -423,30 +414,38 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/easeljs/ui/Touch.js">
+    <entry file="file://$PROJECT_DIR$/js/easeljs/display/MovieClip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="4" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.3937563">
+        <state line="33" column="3" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/elements.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="49" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/easeljs/ui/Touch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="4" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.3937563" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="1" selection-start="599" selection-end="599" vertical-scroll-proportion="-23.12">
-          <folding />
-        </state>
+        <state line="34" column="1" selection-start="599" selection-end="599" vertical-scroll-proportion="-23.12" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/easeljs/display/Graphics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="35" selection-start="1477" selection-end="1477" vertical-scroll-proportion="-2.6020408">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="39" column="35" selection-start="1477" selection-end="1477" vertical-scroll-proportion="-2.6020408" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/easeljs/display/DisplayObject.js">
@@ -458,17 +457,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/easeljs/version_movieclip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="215" selection-end="215" vertical-scroll-proportion="0.15407854">
-          <folding />
-        </state>
+        <state line="9" column="3" selection-start="215" selection-end="215" vertical-scroll-proportion="0.15407854" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/easeljs/display/MovieClip.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="3" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -481,21 +476,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/less/elements.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="49" selection-start="2882" selection-end="2882" vertical-scroll-proportion="-5.94">
+        <state line="60" column="49" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/easeljs/version.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/PVector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="-26.52">
+        <state line="39" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -503,9 +496,7 @@
     <entry file="file://$PROJECT_DIR$/js/easeljs/utils/UID.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -518,14 +509,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="28" selection-start="2220" selection-end="2228" vertical-scroll-proportion="-13.803922">
+        <state line="53" column="28" selection-start="2220" selection-end="2228" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="25" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.4731405">
+        <state line="191" column="0" selection-start="6834" selection-end="6834" vertical-scroll-proportion="0.24284199">
           <folding />
         </state>
       </provider>

@@ -6,15 +6,15 @@ var particleContainer ;                 // Particle Container
 
 // Base Varibles
 var circleRadius=50;
-var numOfParticles = 300;
-var minLife = 2;
-var maxLife = 5;
-var minSize = 1;
-var maxSize = 30;
-var minSpeed = 1;
-var maxSpeed = 5;
-var topSpeed = 4;
-var strength = 1;
+var numOfParticles = 500;
+var minLife =   2;
+var maxLife =   5;
+var minSize =   1;
+var maxSize =   30;
+var minSpeed =  1;
+var maxSpeed =  5;
+var topSpeed =  4;
+var strength =  1;
 
 var baseShape;                          // Base Shape of particles, the ones on the stage just cloen this one
 
@@ -23,6 +23,8 @@ var h ;                                 // Current Height of Canvas
 
 var emiter;                             // Main Emiter, might add more than one later
 var subtractorAr = new Array();         // Array to hold negative forces
+
+var particles = new Array();
 
 function init() {
 
@@ -40,9 +42,7 @@ function init() {
     stage.addChild(particleContainer);    
 
     createEmiter();     // Creates Emiter
-
     createSubtractor(650, 200);
-
     createSubtractor(500, 400);
 
     // Create the base particle for the rest of the particles
@@ -52,8 +52,9 @@ function init() {
     baseShape.graphics.beginFill("#f9a71f").drawCircle(1,1,circleRadius-2);
     baseShape.cache(-circleRadius, -circleRadius, circleRadius*2, circleRadius*2);              // Set Cache
 
-    // 
-    for (var i=0; i < numOfParticles; i++) {
+    //
+    console.log("numOfParticles =" + numOfParticles );
+    for (var i = 0; i < numOfParticles ; i++) {
         createParticle();
     }
 
@@ -62,6 +63,12 @@ function init() {
     stage.addChild(fpsLabel);
     fpsLabel.x = 0;
     fpsLabel.y = 0;
+
+    // My console log
+    consoleLabel = new createjs.Text("--","bold 18px Arial","#FFF");
+    stage.addChild(consoleLabel);
+    consoleLabel.x = 100;
+    consoleLabel.y = 0;
 
     // start the tick and point it at the window so we can do some work before updating the stage:
     createjs.Ticker.addEventListener("tick", tick);
@@ -146,10 +153,11 @@ function createEmiter()
 function createParticle()
 {
     var particle        = new createjs.Bitmap(baseShape.cacheCanvas);
-    particle.scaleX     = particle.scaleY   = randomFromInterval(minSize,maxSize) / 20;                   // Scale'
-    particle.regX       = particle.regY     = - particle.width ;
-
-    // Super Exensive
+    particle.initScale  = randomFromInterval(minSize,maxSize) / 20;                         // FOr the Scale thing
+    particle.scaleX     = particle.scaleY   = particle.initScale                            // Scale'
+    particle.regX       = particle.regY     = - particle.width ;                            // Haven't got this to work yet
+    particle.remove     = false;        // Init Value
+    // Super Expensive
     var randomFilter = new createjs.ColorFilter(randomPrecision(0,1,2),randomPrecision(0,1,2),randomPrecision(0,1,2),1);
     particle.filters = [randomFilter];
     particle.cache( 0 , 0, circleRadius*2, circleRadius*2);              // Set Cache
@@ -168,6 +176,8 @@ function createParticle()
     particle.ttl = particle.totallife = randomPrecision( minLife , maxLife , 2 ) * FPS;           //Init shape Time to live
     particleContainer.addChild(particle);
 
+    particles.push(particle);
+
 }
 
 /**
@@ -176,15 +186,9 @@ function createParticle()
 function tick()
 {
     fpsLabel.text = Math.round(createjs.Ticker.getMeasuredFPS())+" fps";
-    
-    var l = particleContainer.getNumChildren()-1;
-
-    // iterate through all the children and move them according to their velocity:
-    for (var i=0; i<l-1; i++)
+    for (var i = 0 ; i < particles.length ; i++)
     {
-        var shape = particleContainer.getChildAt(i);
-
-        // Negative Forces
+        var shape = particles[i];
         for (var j = 0; j < subtractorAr.length; j++) {
             var element = subtractorAr[j];
             var dir = new PVector(0,0).subStatic( new PVector( element.x , element.y ) , shape.location);
@@ -193,53 +197,49 @@ function tick()
             shape.acceleration = dir;
             shape.velocity.add(shape.acceleration);
         }
-        
         // Adding Forces to Particle
         shape.velocity.limit(topSpeed);
         shape.location.add(shape.velocity);
-
         // Check Edges
-        if (shape.location.x > stage.canvas.width) {
+        if (shape.location.x > stage.canvas.width ) {
             shape.location.x = 0;
         } else if ( shape.location.x < 0) {
             shape.location.x = stage.canvas.width;
         }
-
-        if (shape.location.y > stage.canvas.height) {
+        if (shape.location.y > stage.canvas.height ) {
             shape.location.y = 0;
         }  else if ( shape.location.y < 0) {
             shape.location.y = stage.canvas.height;
         }
-
         // Showing Particle Relative the location VEctor
         shape.x = shape.location.x;
         shape.y = shape.location.y;
-
         // Alpha according to it's lie span
-        shape.alpha = shape.ttl / shape.totallife;
+        //shape.alpha = shape.ttl / shape.totallife;
+        //shape.scaleX = shape.scaleY = shape.initScale * ( shape.ttl / shape.totallife );
         shape.ttl--;
         if(shape.ttl < 1 ) {
             shape.remove = true;
         }
-        
     }
     // Do the Remove Afterwards
-    for ( var i = l ; i > 0 ; i--)
+    for (var i = particles.length - 1  ; i >= 0 ; i--)
     {
-        var shape = particleContainer.getChildAt(i);
+        var shape = particles[i];
         if(shape.remove === true){
             shape.uncache();
             particleContainer.removeChild(shape);
+            particles.splice(i,1);
         }
     }
 
-    var currentNumberOfShapes = particleContainer.getNumChildren()-1;
-    if( currentNumberOfShapes < numOfParticles )  {
-        var neededNumber = numOfParticles - currentNumberOfShapes;
+    if( particles.length < numOfParticles )  {
+        var neededNumber = numOfParticles - particles.length;
         for (var i = 0; i < neededNumber ; i++) {
             createParticle();
         }
     }
+
     stage.update();
 }
 
@@ -276,13 +276,6 @@ function resize() {
  * Jquery Stuff to handle the UI
  */
 $(function() {
-
-    // Get Mouse Location
-    $(document).mousemove(function(e){
-        mouse.x = e.pageX;
-        mouse.y = e.pageY;
-    });
-
     // Amount Slider
     $( "#slider-amount" ).slider({
         min: 100,
@@ -291,7 +284,6 @@ $(function() {
         slide: function( event, ui ) {
             $( "#partAmount" ).val( ui.value );
             numOfParticles = ui.value;
-
         }
     });
     $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ));
