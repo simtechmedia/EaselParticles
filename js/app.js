@@ -4,9 +4,9 @@ var canvas;                             // Canvas
 var stage;                              // Stage
 var particleContainer ;                 // Particle Container
 
-// Base Varibles
+// Base Variables
 var circleRadius=50;
-var numOfParticles = 500;
+var numOfParticles = 250;
 var minLife =   2;
 var maxLife =   5;
 var minSize =   1;
@@ -25,6 +25,9 @@ var emiter;                             // Main Emiter, might add more than one 
 var subtractorAr = new Array();         // Array to hold negative forces
 
 var particles = new Array();
+
+var life_alpha = false;
+var life_size  = true;
 
 function init() {
 
@@ -53,7 +56,6 @@ function init() {
     baseShape.cache(-circleRadius, -circleRadius, circleRadius*2, circleRadius*2);              // Set Cache
 
     //
-    console.log("numOfParticles =" + numOfParticles );
     for (var i = 0; i < numOfParticles ; i++) {
         createParticle();
     }
@@ -77,7 +79,9 @@ function init() {
 
 function createSubtractor(x, y)
 {
-    var subtractor = new createjs.Shape(); 
+    var subtractor = new createjs.Shape();
+    subtractor.graphics.setStrokeStyle(5);
+    subtractor.graphics.beginStroke("#ffffff");
     subtractor.graphics.beginFill("#000000").drawCircle(1,1,circleRadius-2);
     subtractor.x = x ;
     subtractor.y = y ;
@@ -114,7 +118,7 @@ function createEmiter()
 {
     // Create Emiter
     emiter = new createjs.Shape();
-    emiter.graphics.setStrokeStyle(2);
+    emiter.graphics.setStrokeStyle(5);
     emiter.graphics.beginStroke("#000000");
     emiter.graphics.beginFill("#ffffff").drawCircle(1,1,circleRadius-2);
     emiter.x = w / 2 + circleRadius /2 ;
@@ -215,8 +219,14 @@ function tick()
         shape.x = shape.location.x;
         shape.y = shape.location.y;
         // Alpha according to it's lie span
-        //shape.alpha = shape.ttl / shape.totallife;
-        //shape.scaleX = shape.scaleY = shape.initScale * ( shape.ttl / shape.totallife );
+        //
+        if(life_alpha === true ) {
+            shape.alpha = shape.ttl / shape.totallife;
+        }
+
+        if(life_size === true ) {
+            shape.scaleX = shape.scaleY = shape.initScale * ( shape.ttl / shape.totallife );
+        }
         shape.ttl--;
         if(shape.ttl < 1 ) {
             shape.remove = true;
@@ -233,6 +243,7 @@ function tick()
         }
     }
 
+    // Creates More if needed
     if( particles.length < numOfParticles )  {
         var neededNumber = numOfParticles - particles.length;
         for (var i = 0; i < neededNumber ; i++) {
@@ -345,4 +356,28 @@ $(function() {
     })
     $( "#attrStrengh" ).val( $( "#slider-strength" ).slider( "values", 0 ));
 
+    // Hide Menu control
+    $(".openmenu").click(function(){
+        $(this).parent().parent().children(".tools").slideToggle();
+    });
+
+    // Dragable Toolbar
+    // { handle:".header"}
+    $(".dragPane").draggable();
+
+    // Hide Help after 3 seconds
+    setTimeout(function(){
+       $("#help .openmenu").click();
+    },3000);
+
+    $("#check_alpha").change(function(){
+        life_alpha = $(this).prop('checked');
+    });
+
+    $("#check_size").change(function(){
+        life_size = $(this).prop('checked');
+    });
+
+    // Uniform And Style Form
+    $("input").uniform();
 });

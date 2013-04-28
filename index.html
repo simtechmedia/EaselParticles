@@ -3,9 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Easel Particles</title>
+    <link rel="stylesheet" href="css/jquery-ui.css" />
     <link href="less/style.less" rel="stylesheet/less" />
     <link rel="stylesheet" href="css/cupertino/jquery-ui-1.10.2.custom.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/themes/simtech/css/uniform.default.css" media="screen" />
     <script type="text/javascript" src="js/easeljs/utils/UID.js"></script>
     <script type="text/javascript" src="js/easeljs/geom/Matrix2D.js"></script>
     <script type="text/javascript" src="js/easeljs/events/EventDispatcher.js"></script>
@@ -25,6 +28,7 @@
     <script type="text/javascript" src="js/easeljs/filters/ColorMatrixFilter.js"></script>
     <script src="js/vendor/jquery-1.9.1.js"></script>
     <script src="js/vendor/jquery-ui-1.10.2.custom.js"></script>
+    <script src="js/vendor/jquery.uniform.js"></script>
     <script src="js/vendor/html5shiv.js"></script>
     <script src="js/vendor/less-1.3.3.min.js"></script>
     <script src="js/PVector.js"></script>
@@ -32,46 +36,46 @@
 </head>
 <body onload="init()">
 <canvas id="mainCanvas" width="960" height="350"></canvas>
-<div id="toolbar">
-    <h3>Controls</h3>
-    <hr>
-    <p>
-        <label for="partAmount">Particle Amount:</label>
+<div id="toolbar" class="dragPane">
+    <div class="headerPane">
+        <h3><span>Controls</span></h3>
+        <a href="#" class="openmenu">Open</a>
+    </div>
+    <div class="tools">
+        <label for="partAmount">Particles Amount:</label>
         <input type="text" id="partAmount"/>
-    </p>
-    <div id="slider-amount"></div>
-
-    <hr>
-    <p>
-        <label for="partSize">Particle Size:</label>
-        <input type="text" id="partSize" />
-    </p>
-    <div id="slider-size"></div>
-
-    <hr>
-    <p>
-        <label for="partSpeed">Particle Speed:</label>
-        <input type="text" id="partSpeed" />
-    </p>
-    <div id="slider-speed"></div>
-
-    <hr>
-    <p>
-        <label for="partLife">Particle Life:</label>
-        <input type="text" id="partLife" />
-    </p>
-    <div id="slider-life"></div>
-
-    <hr>
-    <p>
-        <label for="attrStrengh">Attraction Strength</label>
-        <input type="text" id="attrStrengh" />
-    </p>
-    <div id="slider-strength"></div>
-    <br/>
-    <p>
-    Drag the white and black circles around to change the emiters and forces
-    </p>
+        <div class="slider" id="slider-amount"></div>
+        <hr>
+            <label for="partSize">Particle Size:</label>
+            <input type="text" id="partSize" />
+        <div class="slider" id="slider-size"></div>
+        <hr>
+            <label for="partSpeed">Particle Speed:</label>
+            <input type="text" id="partSpeed" />
+        <div class="slider" id="slider-speed"></div>
+        <hr>
+            <label for="partLife">Particle Life:</label>
+            <input type="text" id="partLife" />
+        <div class="slider" id="slider-life"></div>
+        <hr>
+            <label for="attrStrengh">Attraction Strength</label>
+            <input type="text" id="attrStrengh" />
+        <div class="slider" id="slider-strength"></div>
+        <h3>Life fade out</h3>
+        <label class="checklab" for="check_alpha"><input type="checkbox" id="check_alpha" name="check_alpha" />Alpha</label>
+        <label class="checklab" for="check_size"><input type="checkbox" id="check_size" name="check_size" checked="true" />Size</label>
+    </div>
+</div>
+<div id="help" class="dragPane">
+    <div class="headerPane">
+        <h3><span>Help</span></h3>
+        <a href="#" class="openmenu">Open</a>
+    </div>
+    <div class="tools">
+        <p>
+            Drag the white and black circles around to change the emiters and forces
+        </p>
+    </div>
 </div>
 </body>
 </html>
