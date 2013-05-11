@@ -14,7 +14,13 @@ var maxSize =   30;
 var minSpeed =  1;
 var maxSpeed =  5;
 var topSpeed =  4;
-var strength =  1;
+var strength =  1
+
+var x0  = -148;
+var x1  = 176;
+
+var y0  = 121;
+var y1  = 350;
 
 var baseShape;                          // Base Shape of particles, the ones on the stage just cloen this one
 
@@ -23,11 +29,12 @@ var h ;                                 // Current Height of Canvas
 
 var emiter;                             // Main Emiter, might add more than one later
 var subtractorAr = new Array();         // Array to hold negative forces
-
 var particles = new Array();
 
 var life_alpha = false;
 var life_size  = true;
+
+var playing = true;
 
 function init() {
 
@@ -67,7 +74,7 @@ function init() {
     fpsLabel.y = 0;
 
     // My console log
-    consoleLabel = new createjs.Text("--","bold 18px Arial","#FFF");
+    consoleLabel = new createjs.Text("","bold 18px Arial","#FFF");
     stage.addChild(consoleLabel);
     consoleLabel.x = 100;
     consoleLabel.y = 0;
@@ -75,6 +82,25 @@ function init() {
     // start the tick and point it at the window so we can do some work before updating the stage:
     createjs.Ticker.addEventListener("tick", tick);
     createjs.Ticker.setFPS(FPS);
+}
+
+
+
+
+function removeAllSubtractors()
+{
+    for (var i = subtractorAr.length - 1  ; i >= 0 ; i--)
+    {
+        var subtractor = subtractorAr[i];
+        removeSub(subtractor);
+    }
+}
+
+function removeSub(subtractor)
+{
+    subtractor.uncache();
+    stage.removeChild(subtractor);
+    subtractorAr.splice(subtractorAr.length - 1,1);
 }
 
 function createSubtractor(x, y)
@@ -112,6 +138,8 @@ function createSubtractor(x, y)
             update = true;
         }
     })(subtractor);
+
+    return subtractor;
 }
 
 function createEmiter()
@@ -251,7 +279,9 @@ function tick()
         }
     }
 
-    stage.update();
+    if(playing)stage.update();
+
+
 }
 
 /*
@@ -358,17 +388,9 @@ $(function() {
 
     // Hide Menu control
     $(".openmenu").click(function(){
-        $(this).parent().parent().children(".tools").slideToggle();
+        //$(this).parent().parent().children(".tools").slideToggle();
     });
 
-    // Dragable Toolbar
-    // { handle:".header"}
-    $(".dragPane").draggable();
-
-    // Hide Help after 3 seconds
-    setTimeout(function(){
-       $("#help .openmenu").click();
-    },3000);
 
     $("#check_alpha").change(function(){
         life_alpha = $(this).prop('checked');
@@ -380,4 +402,57 @@ $(function() {
 
     // Uniform And Style Form
     $("input").uniform();
+
+    // According
+    $( "#accordion" ).accordion();
+
+    // Key Shortcuts
+    $(document).keydown(function(e) {
+    switch (e.keyCode) {
+        // A -  Hide UI
+        case 72:
+         $( "#accordion" ).toggle();
+         break;
+        // P -  Pause / Resume
+        case 80:
+            if (playing != false){
+                playing = false ;
+                createjs.Ticker.setPaused(true);
+                createjs.Ticker.removeEventListener("tick", tick);
+            }else{
+                playing = true ;
+                createjs.Ticker.setPaused(false);
+                createjs.Ticker.addEventListener("tick", tick);
+            }
+            break;
+        // A - Hide / Show Forces
+        case 65:
+            if (emiter.visible === true) {
+                emiter.visible = false;
+                for (var j = 0; j < subtractorAr.length; j++) {
+                    var element = subtractorAr[j];
+                    element.alpha = 0;
+                }
+            }else{
+                emiter.visible = true;
+                for (var j = 0; j < subtractorAr.length; j++) {
+                    var element = subtractorAr[j];
+                    element.alpha = 1;
+                }
+            }
+            break;
+        // F - show FPS
+        case 70:
+            if(fpsLabel.visible === true) {
+                fpsLabel.visible = false;
+            } else {
+                fpsLabel.visible = true;
+            }
+            break;
+        // L - Leap
+        case 76:
+            break;
+        }
+    });
+
 });

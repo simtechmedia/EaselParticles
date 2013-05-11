@@ -4,10 +4,10 @@
     <list default="true" id="c8da5581-76f7-4ec1-a985-57a5d0996a0e" name="Default" comment="" />
     <ignored path="EaselParticles.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1367137603925" ignored="false" />
+    <file path="/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368013965784" ignored="false" />
     <file path="/style.css" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1365999671979" ignored="false" />
-    <file path="/style.less" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366683953176" ignored="false" />
-    <file path="/app.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366685717950" ignored="false" />
+    <file path="/style.less" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1367925298950" ignored="false" />
+    <file path="/app.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368016595057" ignored="false" />
     <file path="/Mover.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366110032816" ignored="false" />
     <file path="/PVector.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366119330309" ignored="false" />
     <file path="/Dummy.txt" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366762246854" ignored="false" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="58" selection-start="3011" selection-end="3011" vertical-scroll-proportion="-34.0">
+            <state line="34" column="26" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.21568628">
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="uniform.default.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/themes/simtech/css/uniform.default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="4" selection-start="3194" selection-end="3194" vertical-scroll-proportion="-8.8">
+            <state line="109" column="4" selection-start="3194" selection-end="3194" vertical-scroll-proportion="141.48">
               <folding />
             </state>
           </provider>
@@ -99,8 +99,13 @@
       <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="22" selection-start="3926" selection-end="3926" vertical-scroll-proportion="-13.08">
-              <folding />
+            <state line="82" column="3" selection-start="2717" selection-end="2717" vertical-scroll-proportion="54.28">
+              <folding>
+                <element signature="e#1083#1746#2" expanded="true" />
+                <element signature="e#3420#4083#2" expanded="true" />
+                <element signature="e#5382#6045#2" expanded="true" />
+                <element signature="e#7059#7722#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +113,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="364" column="26" selection-start="11905" selection-end="11905" vertical-scroll-proportion="0.58912385">
+            <state line="452" column="16" selection-start="14044" selection-end="14044" vertical-scroll-proportion="0.7892562">
               <folding />
             </state>
           </provider>
@@ -137,9 +142,9 @@
         <option value="$PROJECT_DIR$/js/easeljs/display/Mover.js" />
         <option value="$PROJECT_DIR$/js/vendor/PVector.js" />
         <option value="$PROJECT_DIR$/js/PVector.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/themes/simtech/css/uniform.default.css" />
         <option value="$PROJECT_DIR$/less/style.less" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
@@ -615,14 +620,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17449306" sideWeight="0.9980373" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17449306" sideWeight="0.9980373" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -738,27 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/PVector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/easeljs/display/MovieClip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="3" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/easeljs/display/Shape.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="69" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/easeljs/utils/UID.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0">
@@ -780,30 +764,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/themes/simtech/css/uniform.default.css">
+    <entry file="file://$PROJECT_DIR$/js/easeljs/display/MovieClip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="4" selection-start="3194" selection-end="3194" vertical-scroll-proportion="-8.8">
+        <state line="33" column="3" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/themes/simtech/css/uniform.default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="58" selection-start="3011" selection-end="3011" vertical-scroll-proportion="-34.0">
+        <state line="109" column="4" selection-start="3194" selection-end="3194" vertical-scroll-proportion="141.48">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="22" selection-start="3926" selection-end="3926" vertical-scroll-proportion="-13.08">
+        <state line="82" column="3" selection-start="2717" selection-end="2717" vertical-scroll-proportion="54.28">
+          <folding>
+            <element signature="e#1083#1746#2" expanded="true" />
+            <element signature="e#3420#4083#2" expanded="true" />
+            <element signature="e#5382#6045#2" expanded="true" />
+            <element signature="e#7059#7722#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PVector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="13" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/easeljs/display/Shape.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="69" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="26" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.21568628">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="26" selection-start="11905" selection-end="11905" vertical-scroll-proportion="0.58912385">
+        <state line="452" column="16" selection-start="14044" selection-end="14044" vertical-scroll-proportion="0.7892562">
           <folding />
         </state>
       </provider>
