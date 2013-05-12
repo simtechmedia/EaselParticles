@@ -79,7 +79,7 @@ Command.prototype.exec = function(scope) { this.f.apply(scope, this.params); }
  * <h4>Tiny API</h4>
  * The Graphics class also includes a "tiny API", which is one or two-letter methods that are shortcuts for all of the
  * Graphics methods. These methods are great for creating compact instructions, and is used by the Toolkit for CreateJS
- * to generate readable code. All tiny methods are marked as protected, so you can view them by enabling protected
+ * to generate readable code. All tiny methods are marked as protected, so you can views them by enabling protected
  * descriptions in the docs.
  *
  * <table>

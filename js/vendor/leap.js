@@ -862,7 +862,7 @@ var Vector = require("./vector").Vector
  * @classdesc
  * The Gesture class represents a recognized movement by the user.
  *
- * The Leap watches the activity within its field of view for certain movement
+ * The Leap watches the activity within its field of views for certain movement
  * patterns typical of a user gesture or command. For example, a movement from side to
  * side with the hand can indicate a swipe gesture, while a finger poking forward
  * can indicate a screen tap gesture.
@@ -1008,7 +1008,7 @@ var Gesture = exports.Gesture = function(data) {
  * The CircleGesture classes represents a circular finger movement.
  *
  * A circle movement is recognized when the tip of a finger draws a circle
- * within the Leap field of view.
+ * within the Leap field of views.
  *
  * <img src="images/Leap_Gesture_Circle.png"/>
  *
@@ -1277,7 +1277,7 @@ var Pointable = exports.Pointable = function(data) {
    * A unique ID assigned to this Pointable object, whose value remains the
    * same across consecutive frames while the tracked finger or tool remains
    * visible. If tracking is lost (for example, when a finger is occluded by
-   * another finger or when it is withdrawn from the Leap field of view), the
+   * another finger or when it is withdrawn from the Leap field of views), the
    * Leap may assign a new ID when it detects the entity in a future frame.
    *
    * Use the ID value with the pointable() functions defined for the
@@ -1907,7 +1907,7 @@ Frame.prototype.hand = function(id) {
  * The value is always between 0 and pi radians (0 and 180 degrees).
  * 
  * The Leap derives frame rotation from the relative change in position and 
- * orientation of all objects detected in the field of view.
+ * orientation of all objects detected in the field of views.
  * 
  * If either this frame or sinceFrame is an invalid Frame object, then the 
  * angle of rotation is zero.
@@ -1933,7 +1933,7 @@ Frame.prototype.rotationAngle = function(sinceFrame, axis){
  * The returned direction vector is normalized.
  * 
  * The Leap derives frame rotation from the relative change in position and 
- * orientation of all objects detected in the field of view.
+ * orientation of all objects detected in the field of views.
  * 
  * If either this frame or sinceFrame is an invalid Frame object, or if no 
  * rotation is detected between the two frames, a zero vector is returned.
@@ -1957,7 +1957,7 @@ Frame.prototype.rotationAxis = function(sinceFrame){
  * rotational motion between the current frame and the specified frame.
  * 
  * The Leap derives frame rotation from the relative change in position and 
- * orientation of all objects detected in the field of view.
+ * orientation of all objects detected in the field of views.
  * 
  * If either this frame or sinceFrame is an invalid Frame object, then 
  * this method returns an identity matrix.
@@ -1983,7 +1983,7 @@ Frame.prototype.rotationMatrix = function(sinceFrame){
  * Values between 0.0 and 1.0 indicate contraction and values greater than 1.0 indicate expansion.
  * 
  * The Leap derives scaling from the relative inward or outward motion of all 
- * objects detected in the field of view (independent of translation and rotation).
+ * objects detected in the field of views (independent of translation and rotation).
  * 
  * If either this frame or sinceFrame is an invalid Frame object, then this method returns 1.0.
  * 
@@ -2005,7 +2005,7 @@ Frame.prototype.scaleFactor = function(sinceFrame){
  * movement in millimeters.
  * 
  * The Leap derives frame translation from the linear motion of all objects 
- * detected in the field of view.
+ * detected in the field of views.
  * 
  * If either this frame or sinceFrame is an invalid Frame object, then this 
  * method returns a zero vector.
@@ -2123,7 +2123,7 @@ var Hand = exports.Hand = function(data) {
    * A unique ID assigned to this Hand object, whose value remains the same
    * across consecutive frames while the tracked hand remains visible. If
    * tracking is lost (for example, when a hand is occluded by another hand
-   * or when it is withdrawn from or reaches the edge of the Leap field of view),
+   * or when it is withdrawn from or reaches the edge of the Leap field of views),
    * the Leap may assign a new ID when it detects the hand in a future frame.
    *
    * Use the ID value with the {@link Frame.hand}() function to find this

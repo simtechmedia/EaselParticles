@@ -11,7 +11,7 @@ var Vector = require("./vector").Vector
  * @classdesc
  * The Gesture class represents a recognized movement by the user.
  *
- * The Leap watches the activity within its field of view for certain movement
+ * The Leap watches the activity within its field of views for certain movement
  * patterns typical of a user gesture or command. For example, a movement from side to
  * side with the hand can indicate a swipe gesture, while a finger poking forward
  * can indicate a screen tap gesture.
@@ -157,7 +157,7 @@ var Gesture = exports.Gesture = function(data) {
  * The CircleGesture classes represents a circular finger movement.
  *
  * A circle movement is recognized when the tip of a finger draws a circle
- * within the Leap field of view.
+ * within the Leap field of views.
  *
  * <img src="images/Leap_Gesture_Circle.png"/>
  *

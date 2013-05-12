@@ -35,7 +35,7 @@ var Pointable = exports.Pointable = function(data) {
    * A unique ID assigned to this Pointable object, whose value remains the
    * same across consecutive frames while the tracked finger or tool remains
    * visible. If tracking is lost (for example, when a finger is occluded by
-   * another finger or when it is withdrawn from the Leap field of view), the
+   * another finger or when it is withdrawn from the Leap field of views), the
    * Leap may assign a new ID when it detects the entity in a future frame.
    *
    * Use the ID value with the pointable() functions defined for the

@@ -29,7 +29,7 @@ var Hand = exports.Hand = function(data) {
    * A unique ID assigned to this Hand object, whose value remains the same
    * across consecutive frames while the tracked hand remains visible. If
    * tracking is lost (for example, when a hand is occluded by another hand
-   * or when it is withdrawn from or reaches the edge of the Leap field of view),
+   * or when it is withdrawn from or reaches the edge of the Leap field of views),
    * the Leap may assign a new ID when it detects the hand in a future frame.
    *
    * Use the ID value with the {@link Frame.hand}() function to find this

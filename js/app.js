@@ -5,6 +5,7 @@ var stage;                              // Stage
 var particleContainer ;                 // Particle Container
 
 // Base Variables
+
 var circleRadius=50;
 var numOfParticles = 250;
 var minLife =   2;
@@ -318,6 +319,7 @@ function resize() {
  */
 $(function() {
     // Amount Slider
+    /*
     $( "#slider-amount" ).slider({
         min: 100,
         max: 500,
@@ -327,7 +329,7 @@ $(function() {
             numOfParticles = ui.value;
         }
     });
-    $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ));
+    $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ));*/
 
     // Size Slider
     $( "#slider-size" ).slider({

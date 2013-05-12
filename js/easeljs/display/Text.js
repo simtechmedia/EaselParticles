@@ -94,7 +94,7 @@ var p = Text.prototype = new createjs.DisplayObject();
 	
 	/**
 	 * The horizontal text alignment. Any of "start", "end", "left", "right", and "center". For detailed 
-	 * information view the 
+	 * information views the
 	 * <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#text-styles">
 	 * whatwg spec</a>. Default is "left".
 	 * @property textAlign
@@ -103,7 +103,7 @@ var p = Text.prototype = new createjs.DisplayObject();
 	p.textAlign = "left";
 	
 	/** The vertical alignment point on the font. Any of "top", "hanging", "middle", "alphabetic", 
-	 * "ideographic", or "bottom". For detailed information view the 
+	 * "ideographic", or "bottom". For detailed information views the
 	 * <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#text-styles">
 	 * whatwg spec</a>. Default is "top".
 	 * @property textBaseline
@@ -112,7 +112,7 @@ var p = Text.prototype = new createjs.DisplayObject();
 	p.textBaseline = "top";
 	
 	/** The maximum width to draw the text. If maxWidth is specified (not null), the text will be condensed or 
-	 * shrunk to make it fit in this width. For detailed information view the 
+	 * shrunk to make it fit in this width. For detailed information views the
 	 * <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#text-styles">
 	 * whatwg spec</a>.
 	 * @property maxWidth
