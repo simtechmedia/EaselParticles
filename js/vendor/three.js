@@ -8433,7 +8433,7 @@ THREE.Loader.prototype = {
 		var mtype = "MeshLambertMaterial";
 		var mpars = { color: 0xeeeeee, opacity: 1.0, map: null, lightMap: null, normalMap: null, bumpMap: null, wireframe: false };
 
-		// parameters from model file
+		// parameters from models file
 
 		if ( m.shading ) {
 
@@ -8673,8 +8673,8 @@ THREE.BinaryLoader.prototype = Object.create( THREE.Loader.prototype );
 //  - parameters
 //		- url (required)
 //		- callback (required)
-//		- texturePath (optional: if not specified, textures will be assumed to be in the same folder as JS model file)
-//		- binaryPath (optional: if not specified, binary file will be assumed to be in the same folder as JS model file)
+//		- texturePath (optional: if not specified, textures will be assumed to be in the same folder as JS models file)
+//		- binaryPath (optional: if not specified, binary file will be assumed to be in the same folder as JS models file)
 
 THREE.BinaryLoader.prototype.load = function( url, callback, texturePath, binaryPath ) {
 
@@ -10174,7 +10174,7 @@ THREE.SceneLoader.prototype.parse = function ( json, callbackFinished, url ) {
 						mat = objJSON.matrix;
 						quat = objJSON.quaternion;
 
-						// use materials from the model file
+						// use materials from the models file
 						// if there is no material specified in the object
 
 						if ( ! objJSON.material ) {
@@ -10183,9 +10183,9 @@ THREE.SceneLoader.prototype.parse = function ( json, callbackFinished, url ) {
 
 						}
 
-						// use materials from the model file
+						// use materials from the models file
 						// if there is just empty face material
-						// (must create new material as each model has its own face material)
+						// (must create new material as each models has its own face material)
 
 						if ( ( material instanceof THREE.MeshFaceMaterial ) && material.materials.length === 0 ) {
 

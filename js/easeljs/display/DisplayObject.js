@@ -28,7 +28,7 @@
 
 /**
  * The EaselJS Javascript library provides a retained graphics mode for canvas including a full hierarchical display
- * list, a core interaction model, and helper classes to make working with 2D graphics in Canvas much easier.
+ * list, a core interaction models, and helper classes to make working with 2D graphics in Canvas much easier.
  * EaselJS provides straight forward solutions for working with rich graphics and interactivity with HTML5 Canvas...
  *
  * <h4>Getting Started</h4>
@@ -47,7 +47,7 @@
  *
  * <b>User Interactions</b><br />
  * All display objects on stage (except DOMElement) will dispatch events when interacted with using a mouse or
- * touch. EaselJS supports hover, press, and release events, as well as an easy-to-use drag-and-drop model. Check out
+ * touch. EaselJS supports hover, press, and release events, as well as an easy-to-use drag-and-drop models. Check out
  * {{#crossLink "MouseEvent"}}{{/crossLink}} for more information.
  *
  * <h4>Simple Example</h4>

@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8da5581-76f7-4ec1-a985-57a5d0996a0e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/EaselParticles.iml" afterPath="$PROJECT_DIR$/.idea/EaselParticles.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easeljs/display/Graphics.js" afterPath="$PROJECT_DIR$/js/easeljs/display/Graphics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easeljs/display/Text.js" afterPath="$PROJECT_DIR$/js/easeljs/display/Text.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/frame.js" afterPath="$PROJECT_DIR$/js/lib/frame.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/gesture.js" afterPath="$PROJECT_DIR$/js/lib/gesture.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/hand.js" afterPath="$PROJECT_DIR$/js/lib/hand.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/models/ParticlesModel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easeljs/display/DisplayObject.js" afterPath="$PROJECT_DIR$/js/easeljs/display/DisplayObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/easeljs/ui/Touch.js" afterPath="$PROJECT_DIR$/js/easeljs/ui/Touch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/jquery-1.9.1.js" afterPath="$PROJECT_DIR$/js/vendor/jquery-1.9.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/jquery-ui-1.10.2.custom.js" afterPath="$PROJECT_DIR$/js/vendor/jquery-ui-1.10.2.custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/leap.js" afterPath="$PROJECT_DIR$/js/vendor/leap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/pointable.js" afterPath="$PROJECT_DIR$/js/lib/pointable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/three.js" afterPath="$PROJECT_DIR$/js/vendor/three.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EaselParticles.iws" />
@@ -25,14 +18,15 @@
     <file path="/app.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368016595057" ignored="false" />
     <file path="/Mover.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366110032816" ignored="false" />
     <file path="/PVector.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366119330309" ignored="false" />
-    <file path="/Dummy.txt" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368347979568" ignored="false" />
+    <file path="/Dummy.txt" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368348055937" ignored="false" />
     <file path="$PROJECT_DIR$/../angulartwitter/less/style.less" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366644573267" ignored="false" />
     <file path="$PROJECT_DIR$/../jetstar/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1366685454508" ignored="false" />
     <file path="/uniform.default.css" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1367144256248" ignored="false" />
-    <file path="/Main.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368346277253" ignored="false" />
+    <file path="/Main.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368356819136" ignored="false" />
     <file path="/Main.js" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368317988363" ignored="false" />
-    <file path="/MenuView.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368347242091" ignored="false" />
+    <file path="/MenuView.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368356750707" ignored="false" />
     <file path="/JSlider.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368347551653" ignored="false" />
+    <file path="/ParticlesModel.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368354525922" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,21 +46,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.ts" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/Main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="0.709282">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jqueryui.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/libs/jqueryui.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="21" selection-start="651" selection-end="651" vertical-scroll-proportion="0.0">
+            <state line="37" column="42" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-10.882353">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -77,25 +60,25 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="10" selection-start="3845" selection-end="3845" vertical-scroll-proportion="-5.244898">
+            <state line="92" column="16" selection-start="4221" selection-end="4221" vertical-scroll-proportion="-31.333334">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
+      <file leaf-file-name="ParticlesModel.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/models/ParticlesModel.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="331" column="75" selection-start="10386" selection-end="10386" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuView.ts" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MenuView.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ts/views/MenuView.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="85" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.38257173">
               <folding />
             </state>
           </provider>
@@ -104,16 +87,7 @@
       <file leaf-file-name="JSlider.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/views/comps/JSlider.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="56" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSlider.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/view/comps/JSlider.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="40" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+            <state line="12" column="30" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,22 +111,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/easeljs/display/Mover.js" />
-        <option value="$PROJECT_DIR$/js/vendor/PVector.js" />
-        <option value="$PROJECT_DIR$/js/PVector.js" />
-        <option value="$PROJECT_DIR$/css/themes/simtech/css/uniform.default.css" />
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/js/Main.js" />
         <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/view/MenuView.ts" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/ts/libs/jqueryui.d.ts" />
-        <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/Main.ts" />
         <option value="$PROJECT_DIR$/ts/view/MenuView.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/ts/view/comps/JSlider.ts" />
         <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/view/comps/JSlider.ts" />
+        <option value="$PROJECT_DIR$/ts/model/ParticlesModel.ts" />
+        <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/Main.ts" />
+        <option value="$PROJECT_DIR$/ts/views/comps/JSlider.ts" />
+        <option value="$PROJECT_DIR$/ts/models/ParticlesModel.ts" />
+        <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/views/MenuView.ts" />
         <option value="$PROJECT_DIR$/ts/Main.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/ts/views/MenuView.ts" />
       </list>
     </option>
   </component>
@@ -320,6 +294,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EaselParticles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EaselParticles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -407,13 +399,18 @@
       <created>1365777810879</created>
       <updated>1365777810879</updated>
     </task>
+    <task id="LOCAL-00001" summary="Converting to typescript">
+      <created>1368348078762</created>
+      <updated>1368348078762</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1936" height="1087" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.8914167" order="4" side_tool="false" content_ui="tabs" />
@@ -423,8 +420,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973544" sideWeight="0.8914167" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17407407" sideWeight="0.6707946" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973544" sideWeight="0.78018576" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17407407" sideWeight="0.78018576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21981424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -494,17 +491,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="3" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.025210084">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/themes/default/css/uniform.default.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="31" selection-start="3897" selection-end="3897" vertical-scroll-proportion="0.024193548">
@@ -542,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/view/MenuView.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="386" selection-end="386" vertical-scroll-proportion="0.2877698">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/org/opus/signals/SignalBinding.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="16" selection-start="642" selection-end="642" vertical-scroll-proportion="0.44964027">
@@ -556,18 +539,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/Main.ts">
+    <entry file="file://$PROJECT_DIR$/ts/libs/jqueryui.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="1" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.74380165">
+        <state line="25" column="21" selection-start="651" selection-end="651" vertical-scroll-proportion="0.5151099">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/libs/jqueryui.d.ts">
+    <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="21" selection-start="651" selection-end="651" vertical-scroll-proportion="0.0">
+        <state line="14" column="18" selection-start="338" selection-end="338" vertical-scroll-proportion="0.28846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="56" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.82417583">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/Main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="48" selection-start="796" selection-end="796" vertical-scroll-proportion="0.50549453">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/models/ParticlesModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/views/MenuView.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="164" selection-end="164" vertical-scroll-proportion="0.18543956">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/views/comps/JSlider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="30" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/Main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="42" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-10.882353">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -576,45 +603,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="10" selection-start="3845" selection-end="3845" vertical-scroll-proportion="-5.244898">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/view/comps/JSlider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="40" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/views/comps/JSlider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="56" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0">
+        <state line="92" column="16" selection-start="4221" selection-end="4221" vertical-scroll-proportion="-31.333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/views/MenuView.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="85" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="494" selection-end="494" vertical-scroll-proportion="0.38257173">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="331" column="75" selection-start="10386" selection-end="10386" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/Main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="709" selection-end="709" vertical-scroll-proportion="0.709282">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

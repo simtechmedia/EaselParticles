@@ -67,7 +67,7 @@ var Touch = function() {
 	/**
 	 * Enables touch interaction for the specified EaselJS stage. Currently supports iOS (and compatible browsers, such
 	 * as modern Android browsers), and IE10.
-	 * Supports both single touch and multi-touch modes. Extends the EaselJS MouseEvent model, but without support for
+	 * Supports both single touch and multi-touch modes. Extends the EaselJS MouseEvent models, but without support for
 	 * double click or over/out events. See MouseEvent.pointerID for more information.
 	 * @method enable
 	 * @param {Stage} stage The stage to enable touch on.
@@ -83,7 +83,7 @@ var Touch = function() {
 		// inject required properties on stage:
 		stage.__touch = {pointers:{}, multitouch:!singleTouch, preventDefault:!allowDefault, count:0};
 		
-		// note that in the future we may need to disable the standard mouse event model before adding
+		// note that in the future we may need to disable the standard mouse event models before adding
 		// these to prevent duplicate calls. It doesn't seem to be an issue with iOS devices though.
 		if ('ontouchstart' in window) { Touch._IOS_enable(stage); }
 		else if (window.navigator['msPointerEnabled']) { Touch._IE_enable(stage); }
