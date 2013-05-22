@@ -280,7 +280,7 @@ function tick()
         }
     }
 
-    if(playing)stage.update();
+    //if(playing)stage.update();
 
 
 }
@@ -329,7 +329,7 @@ $(function() {
             numOfParticles = ui.value;
         }
     });
-    $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ));*/
+    $( "#partAmount" ).val( $( "#slider-amount" ).slider( "values", 0 ))
 
     // Size Slider
     $( "#slider-size" ).slider({
@@ -345,6 +345,8 @@ $(function() {
     });
     $( "#partSize" ).val( $( "#slider-size" ).slider( "values", 0 ) +
         " -" + $( "#slider-size" ).slider( "values", 1 ) );
+
+     ;
 
     // Life Slider
     $( "#slider-life" ).slider({
@@ -387,6 +389,8 @@ $(function() {
         }
     })
     $( "#attrStrengh" ).val( $( "#slider-strength" ).slider( "values", 0 ));
+
+     */
 
     // Hide Menu control
     $(".openmenu").click(function(){
