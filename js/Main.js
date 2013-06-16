@@ -399,8 +399,8 @@ var ParticleView = (function () {
             _this.tick();
         });
         createjs.Ticker.setFPS(60);
-        var emiter = new Emiter(this.stage.canvas.width / 2, this.stage.canvas.height / 2);
-        this.stage.addChild(emiter);
+        var emitter = new Emitter(this.stage.canvas.width / 2, this.stage.canvas.height / 2, this.stage);
+        this.stage.addChild(emitter);
     };
     ParticleView.prototype.setStage = function (stage) {
         this.stage = stage;
@@ -529,18 +529,43 @@ var JSliderOutput = (function () {
     };
     return JSliderOutput;
 })();
-var Emiter = (function (_super) {
-    __extends(Emiter, _super);
-    function Emiter(x, y) {
+var Emitter = (function (_super) {
+    __extends(Emitter, _super);
+    function Emitter(x, y, stage) {
         _super.call(this);
         this._circleRadius = 50;
+        this._stage = stage;
         this.graphics.setStrokeStyle(5);
         this.graphics.beginStroke("#000000");
         this.graphics.beginFill("#ffffff").drawCircle(1, 1, this._circleRadius - 2);
         this.x = x + this._circleRadius / 2;
         this.y = y + this._circleRadius / 2;
+        console.log("Emiter");
+        console.log(this);
+        var _this = this;
+        this.addEventListener('mousedown', function (evt) {
+            _this.onMousePress(evt);
+        });
+        this.addEventListener('mouseover', function (evt) {
+            _this.onMouseOver(evt);
+        });
+        this.addEventListener('mouseout', function (evt) {
+            _this.onMouseOut(evt);
+        });
     }
-    return Emiter;
+    Emitter.prototype.onMousePress = function (evt) {
+        console.log("onMousePress");
+        console.log(this);
+    };
+    Emitter.prototype.onMouseOver = function (evt) {
+        console.log("mouseOver");
+        this.scaleX = this.scaleY = 1.2;
+    };
+    Emitter.prototype.onMouseOut = function (evt) {
+        console.log("mouseOut");
+        this.scaleX = this.scaleY = 1.0;
+    };
+    return Emitter;
 })(createjs.Shape);
 var EaselParticlesContainer = (function () {
     function EaselParticlesContainer(container) {

@@ -28,7 +28,7 @@ var baseShape;                          // Base Shape of particles, the ones on 
 var w ;                                 // Current Width of Canvas
 var h ;                                 // Current Height of Canvas
 
-var emiter;                             // Main Emiter, might add more than one later
+var emiter;                             // Main Emitter, might add more than one later
 var subtractorAr = new Array();         // Array to hold negative forces
 var particles = new Array();
 
@@ -52,7 +52,7 @@ function init() {
     particleContainer = new createjs.Container();
     stage.addChild(particleContainer);    
 
-    createEmiter();     // Creates Emiter
+    createEmiter();     // Creates Emitter
     createSubtractor(650, 200);
     createSubtractor(500, 400);
 
@@ -144,7 +144,7 @@ function createSubtractor(x, y)
 
 function createEmiter()
 {
-    // Create Emiter
+    // Create Emitter
     emiter = new createjs.Shape();
     emiter.graphics.setStrokeStyle(5);
     emiter.graphics.beginStroke("#000000");

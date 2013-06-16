@@ -6,9 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8da5581-76f7-4ec1-a985-57a5d0996a0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/views/Emiter.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/views/ParticleView.ts" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ts/views/StageView.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/views/Emiter.ts" afterPath="$PROJECT_DIR$/ts/views/Emiter.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/Main.ts" afterPath="$PROJECT_DIR$/ts/Main.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/views/ParticleView.ts" afterPath="$PROJECT_DIR$/ts/views/ParticleView.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/models/ParticlesModel.ts" afterPath="$PROJECT_DIR$/ts/models/ParticlesModel.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
@@ -36,10 +37,10 @@
     <file path="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/views/comps/JSlider.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1368618248879" ignored="false" />
     <file path="/a.dummy" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1369051894332" ignored="false" />
     <file path="/View.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1369912605224" ignored="false" />
-    <file path="/ParticleView.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1371375602624" ignored="false" />
+    <file path="/ParticleView.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1371378488311" ignored="false" />
     <file path="$PROJECT_DIR$/../targetconcept/index.html" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1370355805840" ignored="false" />
     <file path="/StageView.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1371375380488" ignored="false" />
-    <file path="/Emiter.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1371370487443" ignored="false" />
+    <file path="/Emiter.ts" changelist="c8da5581-76f7-4ec1-a985-57a5d0996a0e" time="1371379889644" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
       <file leaf-file-name="StageView.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/views/StageView.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+            <state line="32" column="0" selection-start="749" selection-end="832" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +72,7 @@
       <file leaf-file-name="MenuView.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/views/MenuView.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="46" selection-start="4484" selection-end="4527" vertical-scroll-proportion="0.0">
+            <state line="121" column="10" selection-start="4849" selection-end="4849" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +81,7 @@
       <file leaf-file-name="ParticleView.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/views/ParticleView.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+            <state line="39" column="114" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,28 +90,28 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="44" selection-start="2559" selection-end="2563" vertical-scroll-proportion="-23.2">
+            <state line="176" column="26" selection-start="5359" selection-end="5571" vertical-scroll-proportion="-19.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Emiter.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/views/Emiter.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="64" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.ts" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ts/Main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="51" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.49189985">
+            <state line="34" column="41" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Emiter.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ts/views/Emiter.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="5" selection-start="931" selection-end="931" vertical-scroll-proportion="0.41095892">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,12 +143,12 @@
         <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/libs/easeljs.d.ts" />
         <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/models/ParticlesModel.ts" />
         <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/views/MenuView.ts" />
-        <option value="$PROJECT_DIR$/ts/views/Emiter.ts" />
         <option value="$PROJECT_DIR$/ts/views/MenuView.ts" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/../../xamppfiles/htdocs/EaselParticles/ts/views/ParticleView.ts" />
         <option value="$PROJECT_DIR$/ts/views/StageView.ts" />
         <option value="$PROJECT_DIR$/ts/views/ParticleView.ts" />
+        <option value="$PROJECT_DIR$/ts/views/Emiter.ts" />
         <option value="$PROJECT_DIR$/ts/Main.ts" />
       </list>
     </option>
@@ -445,6 +446,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.78224975" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.8914167" order="4" side_tool="false" content_ui="tabs" />
@@ -452,13 +454,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21775025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21775025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="122" width="1736" height="887" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -530,11 +531,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="35" selection-start="12694" selection-end="12695" vertical-scroll-proportion="0.8356164" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/views/comps/JSliderOutput.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="1" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2260274" />
@@ -588,47 +584,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/views/Emiter.ts">
+    <entry file="file://$PROJECT_DIR$/ts/libs/easeljs.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="64" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/views/StageView.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/views/MenuView.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="46" selection-start="4484" selection-end="4527" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="44" selection-start="2559" selection-end="2563" vertical-scroll-proportion="-23.2">
+        <state line="33" column="19" selection-start="1801" selection-end="1806" vertical-scroll-proportion="0.650289">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/views/ParticleView.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+        <state line="39" column="114" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/views/StageView.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="749" selection-end="832" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/views/MenuView.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="10" selection-start="4849" selection-end="4849" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/Main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="51" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.49189985">
+        <state line="34" column="41" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="26" selection-start="5359" selection-end="5571" vertical-scroll-proportion="-19.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/views/Emiter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="5" selection-start="931" selection-end="931" vertical-scroll-proportion="0.41095892">
+          <folding />
         </state>
       </provider>
     </entry>

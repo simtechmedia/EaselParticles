@@ -36,9 +36,9 @@ class ParticleView {
 
         createjs.Ticker.setFPS(60);
 
-        // Create the emiters
-        var emiter : Emiter = new Emiter(this.stage.canvas.width / 2 , this.stage.canvas.height / 2);
-        this.stage.addChild(emiter);
+        // Create the emitters
+        var emitter : Emitter = new Emitter(this.stage.canvas.width / 2 , this.stage.canvas.height / 2, this.stage);
+        this.stage.addChild(emitter);
 
     }
 

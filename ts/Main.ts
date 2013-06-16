@@ -27,7 +27,7 @@ class EaselParticlesContainer {
 
     /**
      * Constructor
-     * @param container 
+     * @param container
      */
     constructor( container : HTMLElement )  {
 
@@ -36,6 +36,7 @@ class EaselParticlesContainer {
         // Model
         this.particleModel  = new ParticlesModel();
         // Create New Menu View
+
         this.menuView       = new MenuView(this.container);
         this.menuView.setModel(this.particleModel);
         this.menuView.init();
