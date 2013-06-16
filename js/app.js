@@ -38,15 +38,15 @@ var life_size  = true;
 var playing = true;
 
 function init() {
-
+    /*
     if (window.top != window) {
         document.getElementById("header").style.display = "none";
     }
     // create a new stage and point it at our canvas:
     canvas = document.getElementById("mainCanvas");
     stage = new createjs.Stage(canvas);
-    window.addEventListener('resize', resize, false);
-    resize();
+    //window.addEventListener('resize', resize, false);
+    //resize();
 
     // Make a Seperate Container for the particles, makes it easier to manage
     particleContainer = new createjs.Container();
@@ -81,11 +81,10 @@ function init() {
     consoleLabel.y = 0;
 
     // start the tick and point it at the window so we can do some work before updating the stage:
-    createjs.Ticker.addEventListener("tick", tick);
-    createjs.Ticker.setFPS(FPS);
+    //createjs.Ticker.addEventListener("tick", tick);
+    //createjs.Ticker.setFPS(FPS);
+    */
 }
-
-
 
 
 function removeAllSubtractors()
@@ -300,7 +299,7 @@ function randomPrecision(lo, hi, prec){
 
 /**
  * Resize event handler
- */
+
 function resize() {
     // Resize the canvas element
     stage.canvas.width = window.innerWidth;
@@ -313,7 +312,7 @@ function resize() {
     //canvas.x = stage.canvas.width / 2;
     canvas.y = stage.canvas.height / 2;
 }
-
+ */
 /**
  * Jquery Stuff to handle the UI
  */
